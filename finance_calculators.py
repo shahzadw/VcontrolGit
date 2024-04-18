@@ -4,9 +4,10 @@ bond = str("to calculate the amount you'll have to pay on home loan")
 print (f"investment - {investment}" '\n' f"bond       - {bond}" '\n''\n' "Enter either 'investment' or 'bond' to proceed: ")
 
 #bond repayment calculation
+#changing the house value to int() as not expecting decimals on this
 investment_or_bond_input =input("enter a selection: ").lower().strip() #converts everything to lower case and strip() will remove the spaces after the code
 if investment_or_bond_input == "bond":
-    house_value =float(input("present value of the house: "))
+    house_value =int(input("present value of the house: "))
     interest_rate_bond =float(input("enter the interest rate without %: "))
     repayment_duration =int(input("enter the number of months you plan to take to repay the bond: "))
     bond_repayment =(((interest_rate_bond/100)/12)*house_value)/(1-(1+((interest_rate_bond/100)/12))**(-repayment_duration))
@@ -14,6 +15,7 @@ if investment_or_bond_input == "bond":
     print(to_print_b)
 
 #return on investment calculation 
+#float already in use on line 21- no further changes made to this part of the code
 elif investment_or_bond_input == "investment":
     amount_of_money_depositing =float(input("how much money are your depositing: ").strip()) #refer to comment on line 7
     Interest_rate_entry =float((input("enter the interest rate without %: ")))

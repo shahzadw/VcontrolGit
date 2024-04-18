@@ -38,6 +38,23 @@ print (txt_1 + " " + a)
 #this is because lists and dictionaries is the next assignment 
 #ideally I would like to find a solution that takes input from the user but given time contraints i have decided to hardcode values in
 
+#a function cannot be added but see below the possible changes to the code 
+#so that a user can add the word they like
+
+txt_1 = input("Enter first text: ")
+txt_2 = input("Enter second text: ")
+
+x = txt_1.split() #converting into a list so .replace can be used 
+y = txt_1.replace("Hello", "HeLlO") #replace with the desired output
+w = txt_2.split() #same as line 27
+z = txt_2.replace("World", "WoRlD") #same as line 28
+print(y +" "+ z) #added a space " " in the concatenation 
+
+#part 2 of question, making each alternative word as upper or lower case 
+
+a = txt_2.replace("World", "WORLD")
+print (txt_1 + " " + a)
+
 
 
 
